@@ -1,0 +1,29 @@
+{
+  "name": "joriseekhout",
+  "version": "1.0.0",
+  "description": "Joris Eekhout",
+  "author": "Joris Eekhout",
+  "license": "ISC",
+  "scripts": {
+    "clean": "del-cli static/*.css",
+    "sass:watch": "onchange \"assets/sass/**/*.scss\" -- npm run sass:build",
+    "sass:build": "node-sass assets/sass/main.scss static/style.css",
+    "build:assets": "npm run clean && npm run sass:build",
+    "build": "npm run build:assets && hugo",
+    "build:website": "npm run build:assets && hugo --baseURL https://__baseurl__",
+    "start": "npm run clean && npm run sass:build && parallelshell \"npm run sass:watch\" \"hugo serve\"",
+    "compile:sass": "node-sass assets/sass/main.scss assets/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' assets/css/style.comp.css -o assets/css/style.prefix.css",
+    "compress:css": "node-sass assets/css/style.prefix.css static/style.css --output-style compressed",
+    "build:css": "npm run compile:sass && npm run prefix:css && npm run compress:css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.2",
+    "concat": "^1.0.3",
+    "del-cli": "^1.1.0",
+    "node-sass": "^4.1.1",
+    "onchange": "^3.2.1",
+    "parallelshell": "^3.0.2",
+    "postcss-cli": "^6.0.0"
+  }
+}

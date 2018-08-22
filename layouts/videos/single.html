@@ -1,0 +1,43 @@
+{{ partial "header.html" . }}
+
+<header class="header header--single header--video-single">
+    <div class="header__bg-img header--videos">
+        <div class="header__content header__content--single">
+            <h1 class="heading-1 heading-1--single heading-1--center">{{.Title}}</h1>
+        </div>
+    </div>
+</header>
+
+<section class="section section--gradient">
+    <div class="section__content section__content--videos u-margin-top-small u-margin-bottom-big">
+        <div class="video__info--single u-margin-top-small u-margin-bottom-small">
+            <div class="video__authors">
+                <i class="fas fa-users"></i>
+                <p>{{ with .Params.authors }}
+                    {{ delimit . ", " | markdownify }}
+                {{ end }}</p>
+            </div>
+            <div class="video__date">
+                <i class="fas fa-calendar-alt"></i>
+                <p>{{ if .Params.dates }}
+                    {{ .Params.dates | markdownify }},
+                {{ end }}
+                {{ .Date.Format "Jan 2, 2006" }}</p>
+            </div>
+            <div class="video__link">
+                <i class="fas fa-external-link-alt"></i>
+                <p>{{ if .Params.id }}
+                    <a href="https://www.youtube.com/watch?v={{ .Params.id }}">Watch on YouTube </a>
+                {{ end }}</p>
+            </div>
+            <div class="video__description u-margin-top-small u-margin-bottom-medium">
+                <p>{{ .Params.description | markdownify }}</p>
+            </div>
+        </div>
+        <div class="video__embeded">
+            <iframe class="video__iframe" src="https://www.youtube.com/embed/{{- .Params.id -}}" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+{{ partial "footer.html" . }}

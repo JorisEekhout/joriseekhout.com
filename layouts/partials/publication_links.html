@@ -1,0 +1,49 @@
+{{ $is_list := .is_list }}
+{{ $ := .content }}
+
+{{ if $.Params.abstract }}
+    <a class="icon icon--publication" href="#popup__abstract--{{ $.File.TranslationBaseName }}">
+        <i class="fas fa-info-circle"></i>
+    </a>
+    {{ .Site.GetPage "page" "blog" }}
+{{ end }}
+{{ with $.Params.doi }}
+    <a class="icon icon--publication" href="https://doi.org/{{ $.Params.doi }}" target="_blank">
+        <i class="ai ai-doi"></i>
+    </a>
+{{ end }}
+{{ with $.Params.url_article }}
+    <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
+        <i class="fa fa-book-open"></i>
+    </a>
+{{ end }}
+{{ with $.Params.url_pdf }}
+    <a class="icon icon--publication" href="/pdf/{{ $.Params.url_pdf }}" target="_blank">
+        <i class="fa fa-file-pdf"></i>
+    </a>
+{{ end }}
+{{ with $.Params.url_slides }}
+    <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
+        <i class="fa fa-slideshare"></i>
+    </a>
+{{ end }}
+{{ with $.Params.url_video }}
+    <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
+        <i class="fa fa-video"></i>
+    </a>
+{{ end }}
+{{ with $.Params.url_code }}
+    <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
+        <i class="fa fa-code"></i>
+    </a>
+{{ end }}
+{{ with $.Params.url_dataset }}
+    <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
+        <i class="fa fa-database"></i>
+    </a>
+{{ end }}
+{{ with $.Params.project }}
+    <a class="icon icon--publication" href="/projects/{{ $.Params.project }}">
+        <i class="fas fa-project-diagram"></i>
+    </a>
+{{ end }}

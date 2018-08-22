@@ -1,0 +1,39 @@
+{{ $captions := .Params.captions }}
+
+<div class="carousel">
+    {{ range $index, $element := (readDir (print "/content/presentations/" $.File.TranslationBaseName) ) }}
+        {{ if (eq $index 0) }}
+            <input id="image{{ (add $index 1) }}" type="radio" name="image-selector" checked="checked" />
+            <label for="image{{ len (readDir (print "/content/presentations/" $.File.TranslationBaseName) ) }}">View image {{ len (readDir (print "/content/presentations/" $.File.TranslationBaseName) ) }}</label>
+            <div class="carousel__content">
+                <img src="{{ (print "../" $.File.TranslationBaseName "/" .Name) }}" />
+                <div class="carousel__caption">
+                    <div class="carousel__caption-number">
+                        {{ (add $index 1) }}/{{ len (readDir (print "/content/presentations/" $.File.TranslationBaseName) ) }}
+                    </div>
+                    <div class="carousel__caption-text">
+                        {{ index ($captions) $index }}
+                    </div>
+                </div>
+            </div>
+        {{ else }}
+            <input id="image{{ (add $index 1) }}" type="radio" name="image-selector"/>
+            <label for="image{{ (add $index 0) }}">View image {{ (add $index 0) }}</label>
+            <div class="carousel__content">
+                <img src="{{ (print "../" $.File.TranslationBaseName "/" .Name) }}" />
+                <div class="carousel__caption">
+                    <div class="carousel__caption-number">
+                        {{ (add $index 1) }}/{{ len (readDir (print "/content/presentations/" $.File.TranslationBaseName) ) }}
+                    </div>
+                    <div class="carousel__caption-text">
+                        {{ index ($captions) $index }}
+                    </div>
+                </div>
+            </div>
+        {{ end }}
+    {{ end }}
+
+    <label for="image{{ len (readDir (print "/content/presentations/" $.File.TranslationBaseName) ) }}">View image {{ len (readDir (print "/content/presentations/" $.File.TranslationBaseName) ) }}</label>
+    <label for="image1">View image 1</label>
+</div>
+  

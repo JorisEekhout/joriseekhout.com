@@ -1,0 +1,34 @@
+<h3 class="heading-4 share__heading">Share this post</h3>
+<ul class="share__links">
+    <!-- Twitter -->
+    <li class="share__item">
+        <a href="//twitter.com/share?url={{ .Permalink }}&amp;text={{ .Title }}&amp;via={{ .Site.Params.twitter }}" target="_blank" class="share-btn color--twitter">
+            <i class="fab fa-twitter"></i>
+            <p>Twitter</p>
+        </a>
+    </li>
+
+    <!-- Facebook -->
+    <li class="share__item">
+        <a href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="share-btn color--facebook">
+            <i class="fab fa-facebook"></i>
+            <p>Facebook</p>
+        </a>
+    </li>
+
+    <!-- LinkedIn -->
+    <li class="share__item">
+        <a href="//www.linkedin.com/shareArticle?url={{ .Permalink }}&amp;title={{ .Title }}" target="_blank" class="share-btn color--linkedin">
+            <i class="fab fa-linkedin"></i>
+            <p>LinkedIn</p>
+        </a>
+    </li>
+
+    <!-- Email -->
+    <li class="share__item">
+        <a href="mailto:?subject=Check out this post by {{ .Params.author }}&amp;body={{ .Permalink }}" target="_blank" class="share-btn color--email">
+            <i class="fa fa-envelope"></i>
+            <p>Email</p>
+        </a>
+    </li>
+</ul>

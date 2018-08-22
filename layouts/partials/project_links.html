@@ -1,0 +1,13 @@
+{{ $is_list := .is_list }}
+{{ $ := .content }}
+
+{{ if $is_list }}
+<a class="icon icon--publication" href="{{ $.Permalink }}">
+  <i class="fas fa-info-circle"></i>
+</a>
+{{ end }}
+{{ with $.Params.external_link }}
+<a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
+  <i class="fas fa-external-link-alt"></i>
+</a>
+{{ end }}

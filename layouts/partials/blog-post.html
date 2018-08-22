@@ -1,0 +1,20 @@
+<div class="blog__post">
+    <a href="{{ .RelPermalink }}" class="blog__link">
+        {{ if (fileExists (print "/blog/" $.File.TranslationBaseName ".jpg") ) }}
+            <div class="blog__header" style="background-image: url({{ (print "../blog/" $.File.TranslationBaseName ".jpg") }})">
+                <h3 class="heading-3 blog__title">{{ .Title }}</h3>
+            </div>
+        {{ else }}
+            <h3 class="heading-3 blog__title blog__title--dark">{{ .Title }}</h3>
+        {{ end }}
+    </a>
+    <div class="blog__text">
+        <div class="blog__date u-margin-top-small u-margin-bottom-small">Published on: {{ .Date.Format "January 2, 2006" }}</div>
+        <div class="blog__content">
+            {{ .Content }}
+        </div>
+        <div class="share">
+            {{ partial "share_buttons.html" . }}
+        </div>
+    </div>
+</div>

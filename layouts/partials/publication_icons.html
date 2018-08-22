@@ -1,0 +1,56 @@
+<div class="publication__icons-list">
+    <div class="publication__icon-item">
+        <a class="icon icon--publication" href="#popup__abstract--{{ $.File.TranslationBaseName }}">
+            <i class="fas fa-info-circle"></i>
+        </a>
+        <p>(graphical) abstract</p>
+    </div>
+    <div class="publication__icon-item">
+        <a class="icon icon--publication" href="https://doi.org/{{ $.Params.doi }}" target="_blank">
+            <i class="ai ai-doi"></i>
+        </a>
+        <p>link to publisher</p>
+    </div>
+    <div class="publication__icon-item">
+        <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
+            <i class="fa fa-book-open"></i>
+        </a>
+        <p>link to article</p>
+    </div>
+    <div class="publication__icon-item">
+        <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
+            <i class="fa fa-file-pdf"></i>
+        </a>
+        <p>download pdf</p>
+    </div>
+    <div class="publication__icon-item">
+        <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
+            <i class="fab fa-slideshare"></i>
+        </a>
+        <p>presentation</p>
+    </div>
+    <div class="publication__icon-item">
+        <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
+            <i class="fa fa-video"></i>
+        </a>
+        <p>video abstract</p>
+    </div>
+    <div class="publication__icon-item">
+        <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
+            <i class="fa fa-code"></i>
+        </a>
+        <p>code</p>
+    </div>
+    <div class="publication__icon-item">
+        <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
+            <i class="fa fa-database"></i>
+        </a>
+        <p>dataset</p>
+    </div>
+    <div class="publication__icon-item">
+        <a class="icon icon--publication" href="/projects/{{ $.Params.project }}">
+            <i class="fas fa-project-diagram"></i>
+        </a>
+        <p>project</p>
+    </div>
+</div>

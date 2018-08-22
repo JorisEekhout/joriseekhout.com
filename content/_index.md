@@ -1,0 +1,4 @@
+---
+---
+
+I'm a postdoctoral researcher with a Juan de la Cierva fellowship in the [Soil and Water Conservation Research Group](http://www.soilwaterconservation.es) in CEBAS-CSIC (Murcia, Spain). Currently, I focus on the impact of climate change and landuse change on hydrology and soil erosion in Mediterranean environments. In collaboration with [FutureWater](http://www.futurewater.eu) I have developed a coupled hydrology-soil erosion model ([SPHY-MMF](https://github.com/JorisEekhout/SPHY/tree/SPHY2.1-MMF)), which I have applied in the Segura River catchment. Please visit the pages related to my research output ([publications](/publications), [presentations](/presentations) and [projects](/projects)) and to my outreach activities ([blog](/blog) and [videos](/videos)).

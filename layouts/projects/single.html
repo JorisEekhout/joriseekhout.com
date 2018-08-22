@@ -1,0 +1,58 @@
+{{ partial "header.html" . }}
+
+<header class="header header--projects header--single header--project-single">
+    <div class="header__bg-img header--projects">
+        <div class="header__content header__content--single">
+            <h1 class="heading-1 heading-1--single">{{.Title}}</h1>
+        </div>
+    </div>
+</header>
+
+{{ if fileExists (print "/content/" .Section "/" $.File.TranslationBaseName) }}
+    <section class="section section--4">
+        <div class="section__content u-margin-top-big u-margin-bottom-big">
+            <div class="project__content">
+                {{ .Content }}
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--5">
+        <div class="section__content--wide section__content--gallery u-margin-top-big u-margin-bottom-big">
+            {{ partial "gallery" . }}
+        </div>
+    </section>    
+{{ else }}
+    <section class="section section--5">
+        <div class="section__content u-margin-top-big u-margin-bottom-big">
+            <div class="project__content">
+                {{ .Content }}
+            </div>
+        </div>
+    </section>
+{{ end }}
+
+<section class="section section--6">
+    <div class="section__content u-margin-top-medium u-margin-bottom-big">
+        <h2 class="heading-2 u-center-text">Related Publications</h2>
+        <div class="publication__list u-margin-bottom-medium u-margin-top-medium">
+            {{ range where (where .Site.Pages "Section" "publications") ".Params.project" .File.BaseFileName }}
+                {{ partial "publication_item" . }}
+                {{ partial "publication_popup" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="section section--7">
+    <div class="section__content--wide u-margin-top-medium u-margin-bottom-big">
+        <h2 class="heading-2 u-center-text">Related Presentations</h2>
+        <div class="presentation__list u-margin-bottom-medium u-margin-top-medium">
+            {{ range where (where .Site.Pages "Section" "presentations") ".Params.project" .File.BaseFileName }}
+                {{ partial "presentation_card" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "footer.html" . }}

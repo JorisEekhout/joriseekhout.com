@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+
+<header class="header header--about">
+    <div class="header__content">
+        <h1 class="heading-1">{{ .Title }}</h1>
+    </div>
+</header>
+
+<section class="section section--5">
+    <div class="section__content u-margin-top-huge u-margin-bottom-huge">
+        <div class="section__content--about">
+            {{ .Content }}
+        </div>
+    </div>
+</section>
+
+<section class="section section--6">
+    <div class="section__content section__content--timeline u-margin-top-huge u-margin-bottom-huge">
+        <h2 class="heading-2 u-center-text">Timeline</h2>
+        {{ partial "timeline" . }}
+    </div>
+</section>
+
+<section class="section section--7">
+    <div class="section__content--wide u-margin-top-huge u-margin-bottom-huge">
+        <div class="website__list u-margin-bottom-medium u-margin-top-medium">
+            <h2 class="heading-2 u-center-text">Websites</h2>
+            {{ range (where .Data.Pages.ByDate.Reverse "Section" "about-me") }}
+                {{ partial "website_card" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "footer.html" . }}

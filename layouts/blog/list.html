@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<header class="header header__bg-img header--blog">
+    <div class="header__content">
+        <h1 class="heading-1">{{ .Title }}</h1>
+    </div>
+</header>
+
+{{ $paginator := .Paginate (where .Data.Pages "Type" "blog") 5 }}
+{{ range $index, $element := $paginator.Pages }}
+    <section class="section section--{{- (add $index 3) -}}">
+        <div class="section__content">
+            {{ partial "blog-post" . }}
+        </div>
+    </section>
+{{ end }}
+
+<section class="section--pagination">
+    {{ partial "pagination.html" . }}
+</section>
+
+{{ partial "footer.html" . }}

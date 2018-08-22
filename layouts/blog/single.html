@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+
+<header class="header header--single">
+    {{ if (fileExists (print "/blog/" $.File.TranslationBaseName ".jpg") ) }}
+        <div class="header__bg-img" style="background-image: url({{ (print "../" $.File.TranslationBaseName ".jpg") }})">
+            <div class="header__content header__content--blog-single">
+                <h1 class="heading-1 blog__title blog__title--single">{{.Title}}</h1>
+            </div>
+        </div>
+    {{ else }}
+        <div class="header__bg-img header--blog">
+            <div class="header__content header__content--blog-single">
+                <h1 class="heading-1 blog__title blog__title--single blog__title--orange">{{.Title}}</h1>
+            </div>
+        </div>
+    {{ end }}
+</header>
+
+<section class="section section--gradient">
+    <div class="section__content section__content--single u-margin-top-small u-margin-bottom-big">
+        <div class="blog__date u-margin-top-small u-margin-bottom-small">Published on: {{ .Date.Format "January 2, 2006" }}</div>
+        <div class="blog__content">
+            {{ .Content }}
+        </div>
+        <div class="share share--single">
+            {{ partial "share_buttons.html" . }}
+        </div>
+    </div>
+</section>
+
+{{ partial "footer.html" . }}

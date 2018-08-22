@@ -1,0 +1,53 @@
+{{ partial "header" . }}
+
+<header class="header header__bg-img header--home">
+    <div class="header__content header__content--home">
+        <h1 class="heading-1">{{ .Site.Title }}</h1>
+        <figure class="header__img--home">
+            <img src="/img/photo_joris_eekhout.png" alt="Joris Eekhout" />
+        </figure>
+        
+        <div class="header__text--home">
+            {{ .Content }}
+        </div>
+    </div>
+</header>
+
+<section class="section section--4">
+    <div class="section__content u-margin-top-huge u-margin-bottom-huge">
+        <h2 class="heading-2 u-center-text">My Latest Blog Post</h2>
+        <div class="blog__latest u-margin-bottom-big u-margin-top-medium">
+            {{ range first 1 (where .Data.Pages "Section" "blog") }}
+                {{ partial "blog-post" . }}
+            {{ end }}
+        </div>
+        <a href="/blog/" class="btn btn--orange btn--home">Read More Blog Posts</a>
+    </div>
+</section>
+
+<section class="section section--5">
+    <div class="section__content u-margin-top-huge u-margin-bottom-huge">
+        <h2 class="heading-2 u-center-text">My Latest Publications</h2>
+        <div class="publication__latest u-margin-bottom-big u-margin-top-medium">
+            {{ range first 3 (where (where (where .Data.Pages.ByDate.Reverse "Section" "publications") ".Params.publication_type" "1") ".Params.status" "") }}
+                {{ partial "publication_item" . }}
+                {{ partial "publication_popup" . }}
+            {{ end }}
+        </div>
+        <a href="/publications/" class="btn btn--orange btn--home">See All My Publications</a>
+    </div>
+</section>
+
+<section class="section section--6">
+    <div class="section__content--wide u-margin-top-huge u-margin-bottom-huge">
+        <h2 class="heading-2 u-center-text">My Latest Presentations</h2>
+        <div class="presentation__latest u-margin-bottom-big u-margin-top-medium">
+            {{ range first 3 (where .Data.Pages.ByDate.Reverse "Section" "presentations") }}
+                {{ partial "presentation_card" . }}
+            {{ end }}
+        </div>
+        <a href="/presentations/" class="btn btn--orange btn--home">See All My Presentations</a>
+    </div>
+</section>
+
+{{ partial "footer" . }}

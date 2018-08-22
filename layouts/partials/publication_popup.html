@@ -1,0 +1,20 @@
+<div class="popup" id="popup__abstract--{{ $.File.TranslationBaseName }}">
+    <a  class="popup__cancel" href="#!"></a>
+    <div class="popup__content">
+        <div class="popup__info">
+            {{ partial "publication_item" . }}
+        </div>
+        <a href="#!" class="popup__close">&times;</a>
+        <p class="popup__text">
+            {{- if .Params.abstract -}}
+                {{- .Params.abstract | markdownify -}}
+            {{ end }}
+        </p>
+        {{ if (fileExists (print "publications/" $.File.TranslationBaseName ".jpg") ) }}
+            <div class="popup__image">
+                <img src="{{ (print "../../publications/" $.File.TranslationBaseName ".jpg") }}" title="Graphical abstract">
+            </div>
+        {{ end }}
+    </div>
+</div>
+    

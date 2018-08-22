@@ -1,0 +1,31 @@
+<div class="presentation__item" id="presentation__item--{{ $.File.TranslationBaseName }}">
+    <a href="{{.Permalink}}">
+        <div class="presentation__img" style="background-image: url({{ (print "../../presentations/" $.File.TranslationBaseName ".jpg") }})">
+        </div>
+    </a>
+    <div class="presentation__title">
+        <h4 class="heading-4">{{ .Title }}</h4>
+    </div>
+    <div class="presentation__info">
+        <div class="presentation__authors">
+            <i class="fas fa-users"></i>
+            <p>{{ with .Params.authors }}
+                {{ delimit . ", " | markdownify }}
+            {{ end }}</p>
+        </div>
+        <div class="presentation__location">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>{{ if .Params.location }}
+                {{ .Params.location | markdownify }}
+            {{ end }}</p>
+        </div>
+        <div class="presentation__date">
+            <i class="fas fa-calendar-alt"></i>
+            <p>{{ if .Params.dates }}
+                {{ .Params.dates | markdownify }},
+            {{ end }}
+            {{ .Date.Format "2006" }}</p>
+        </div>
+    </div>
+    <a href="{{.Permalink}}" class="btn btn--orange u-margin-bottom-medium u-margin-top-small">More Info</a>
+</div>

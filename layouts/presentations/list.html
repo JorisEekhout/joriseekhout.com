@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+
+<header class="header header__bg-img header--presentations">
+    <div class="header__content">
+        <h1 class="heading-1">{{ .Title }}</h1>
+    </div>
+</header>
+
+<section class="section section--4">
+    <div class="section__content--wide u-margin-top-huge u-margin-bottom-huge">
+        <h2 class="heading-2 u-center-text">Oral Presentations</h2>
+        <div class="presentation__list u-margin-bottom-medium u-margin-top-medium">
+            {{ range (where (where .Data.Pages.ByDate.Reverse "Section" "presentations") ".Params.presentation_type" "1") }}
+                {{ partial "presentation_card" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="section section--6">
+    <div class="section__content--wide u-margin-top-huge u-margin-bottom-huge">
+        <h2 class="heading-2 u-center-text">Poster Presentations</h2>
+        <div class="presentation__list u-margin-bottom-medium u-margin-top-medium">
+            {{ range (where (where .Data.Pages.ByDate.Reverse "Section" "presentations") ".Params.presentation_type" "2") }}
+                {{ partial "presentation_card" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "footer.html" . }}

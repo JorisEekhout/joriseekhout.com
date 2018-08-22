@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        <!-- Standard Metadata -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+        <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+        
+        <!-- Responsive meta tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@JorisEekhout" />
+        <meta name="twitter:creator" content="@JorisEekhout" />
+
+        <!-- Open Graph Protocol http://ogp.me/ -->
+        <meta property="og:locale" content="en_US">
+        <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+        {{ if .IsPage }}
+            <meta property="og:type" content="article">
+            {{ if (fileExists (print .Section "/" $.File.TranslationBaseName ".jpg") ) }}
+                <meta property="og:image" content="{{ (print .Site.BaseURL .Section "/" $.File.TranslationBaseName ".jpg") }}">
+            {{ end }}
+        {{ else }}
+            <meta property="og:type" content="website">
+            <meta property="og:image" content="{{.Site.BaseURL}}img/site-logo.jpg">
+        {{ end }}
+        <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+        <meta property="og:site_name" content="{{ .Site.Title }}">
+        <meta property="og:url" content="{{ .Permalink }}">
+
+        <!-- Chrome, Firefox OS and Opera --> 
+        <meta name="theme-color" content="#0868ac"> 
+        <!-- Windows Phone --> 
+        <meta name="msapplication-navbutton-color" content="#0868ac"> 
+        <meta name="msapplication-TileColor" content="#7bccc4">
+        <!-- iOS Safari --> 
+        <meta name="apple-mobile-web-app-capable" content="yes"> 
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#084081">
+
+        {{ partial "css" . }} {{ partial "js" . }} {{ .Hugo.Generator }}
+        {{ if .RSSLink }}
+            <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+            <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+        {{ end }}
+    </head>
+
+    <body class="container">
+        <nav class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <div class="navigation__phone">
+                <div class="navigation__brand">
+                    <a href="{{ .Site.BaseURL }}" class="navigation__link">{{ .Site.Title }}</a>
+                </div>
+
+                <label for="navi-toggle" class="navigation__button">
+                    <span class="navigation__icon">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </label>
+            </div>
+            {{ if .Site.Menus.main }}
+                <ul class="navigation__list">
+                    {{ range sort .Site.Menus.main }}
+                    <a href="{{ .URL }}" class="navigation__link"><li class="navigation__item"><div class="navigation__text">{{ .Name }}</div></li></a>
+                    {{ end }}
+                </ul>
+            {{ end }}
+        </nav>

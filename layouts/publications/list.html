@@ -1,0 +1,90 @@
+{{ partial "header.html" . }}
+
+<header class="header header--publications">
+    <div class="header__content">
+        <h1 class="heading-1">{{ .Title }}</h1>
+    </div>
+</header>
+
+<section class="section section--2">
+    <div class="section__content section--publication-icons u-margin-top-huge u-margin-bottom-huge">
+        <p>Below is a list of all my publications. More info can be found through the icons below each publication.</p>
+        {{ partial "publication_icons" . }}
+    </div>
+</section>
+
+<section class="section section--3">
+    <div class="section__content u-margin-top-huge u-margin-bottom-huge">
+        <h2 class="heading-2 u-center-text">Peer-reviewed Publications</h2>
+        <div class="publication__list u-margin-bottom-medium u-margin-top-medium">
+            {{ range (where (where (where .Data.Pages.ByDate.Reverse "Section" "publications") ".Params.publication_type" "1") ".Params.status" "") }}
+                {{ partial "publication_item" . }}
+                {{ partial "publication_popup" . }}
+            {{ end }}
+        </div>
+        <h2 class="heading-2 u-center-text u-margin-top-big">Manuscripts In Preparation</h2>
+        <div class="publication__list u-margin-bottom-medium u-margin-top-medium">
+            {{ range (where (where (where .Data.Pages.ByDate.Reverse "Section" "publications") ".Params.publication_type" "1") ".Params.status" "!=" "") }}
+                {{ partial "publication_item" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="section section--4">
+    <div class="section__content u-margin-top-huge u-margin-bottom-huge">
+        <h2 class="heading-2 u-center-text">Conference proceedings</h2>
+        <div class="publication__list u-margin-bottom-medium u-margin-top-medium">
+            {{ range (where (where .Data.Pages.ByDate.Reverse "Section" "publications") ".Params.publication_type" "3") }}
+                {{ partial "publication_item" . }}
+                {{ partial "publication_popup" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="section section--5">
+    <div class="section__content u-margin-top-huge u-margin-bottom-huge">
+        <h2 class="heading-2 u-center-text">Thesis</h2>
+        <div class="publication__list u-margin-bottom-medium u-margin-top-medium">
+            {{ range (where (where .Data.Pages.ByDate.Reverse "Section" "publications") ".Params.publication_type" "4") }}
+                <div class="publication__thesis">
+                    <div class="publication__item--thesis">
+                        {{ partial "publication_item" . }}
+                    </div>
+                    {{ partial "publication_cover" . }}
+                    <div class="publication__content">
+                        {{ .Content }}
+                    </div>
+                </div>
+                {{ partial "publication_popup" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="section section--6">
+    <div class="section__content u-margin-top-huge u-margin-bottom-huge">
+        <h2 class="heading-2 u-center-text">Reports</h2>
+        <div class="publication__list u-margin-bottom-medium u-margin-top-medium">
+            {{ range (where (where .Data.Pages.ByDate.Reverse "Section" "publications") ".Params.publication_type" "5") }}
+                {{ partial "publication_item" . }}
+                {{ partial "publication_popup" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="section section--7">
+    <div class="section__content u-margin-top-huge u-margin-bottom-huge">
+        <h2 class="heading-2 u-center-text">Popular Scientific Articles</h2>
+        <div class="publication__list u-margin-bottom-medium u-margin-top-medium">
+            {{ range (where (where .Data.Pages.ByDate.Reverse "Section" "publications") ".Params.publication_type" "6") }}
+                {{ partial "publication_item" . }}
+                {{ partial "publication_popup" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "footer.html" . }}

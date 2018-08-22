@@ -1,0 +1,31 @@
+<div class="video__item" id="video__item--{{ $.File.TranslationBaseName }}">
+    <a href="{{.Permalink}}">
+        <div class="video__img" style="background-image: url({{ (print "../videos/" $.File.TranslationBaseName ".jpg") }})">
+        </div>
+    </a>
+    <div class="video__title">
+        <h4 class="heading-4">{{ .Title }}</h4>
+    </div>
+    <div class="video__info">
+        <div class="video__authors">
+            <i class="fas fa-users"></i>
+            <p>{{ with .Params.authors }}
+                {{ delimit . ", " | markdownify }}
+            {{ end }}</p>
+        </div>
+        <div class="video__date">
+            <i class="fas fa-calendar-alt"></i>
+            <p>{{ if .Params.dates }}
+                {{ .Params.dates | markdownify }},
+            {{ end }}
+            {{ .Date.Format "Jan 2, 2006" }}</p>
+        </div>
+        <div class="video__link">
+            <i class="fas fa-external-link-alt"></i>
+            <p>{{ if .Params.id }}
+                <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v={{ .Params.id }}">Watch on YouTube </a>
+            {{ end }}</p>
+        </div>
+    </div>
+    <a href="{{.Permalink}}" class="btn btn--orange u-margin-bottom-medium u-margin-top-small">More Info</a>
+</div>

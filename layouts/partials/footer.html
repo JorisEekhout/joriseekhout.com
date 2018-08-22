@@ -1,0 +1,69 @@
+        <footer class="footer">
+            <div class="footer__social_media u-margin-top-big">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#114;&#105;&#115;&#101;&#101;&#107;&#104;&#111;&#117;&#116;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" class="footer__link color--email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/JorisEekhout/" class="footer__link color--github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/JorisEekhout/" class="footer__link color--twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.researchgate.net/profile/Joris_Eekhout/" class="footer__link color--researchgate">
+                            <i class="ai ai-researchgate"></i>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a target="_blank" rel="noopener noreferrer" href="http://scholar.google.es/citations?user=Y3ZprKUAAAAJ&hl=en/" class="footer__link color--google-scholar">
+                            <i class="ai ai-google-scholar"></i>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a target="_blank" rel="noopener noreferrer" href="https://figshare.com/authors/Joris_Eekhout/534439/" class="footer__link color--figshare">
+                            <i class="ai ai-figshare"></i>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a target="_blank" rel="noopener noreferrer" href="http://orcid.org/0000-0003-2097-696X/" class="footer__link color--orcid">
+                            <i class="ai ai-orcid"></i>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a target="_blank" rel="noopener noreferrer" href="https://publons.com/author/1263380/joris-eekhout/" class="footer__link color--publons">
+                            <i class="ai ai-publons"></i>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a target="_blank" rel="noopener noreferrer" href="http://es.linkedin.com/pub/joris-eekhout/7/427/bb8/" class="footer__link color--linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__copyright u-margin-top-huge u-margin-bottom-small">
+                {{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io)" | markdownify }}
+            </div>
+        </footer>
+        {{ if not (in (.Site.BaseURL | string) "localhost") }}
+            <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            
+                ga('create', 'UA-59890904-1', {'siteSpeedSampleRate': 100});
+                ga('send', 'pageview');
+                ga('set', 'anonymizeIp', true);
+            </script>
+        {{ end }}        
+    </body>
+</html>

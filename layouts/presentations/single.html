@@ -1,0 +1,71 @@
+{{ partial "header.html" . }}
+
+<header class="header header--single header--presentation-single">
+    <div class="header__bg-img header--presentations">
+        <div class="header__content header__content--presentations-single">
+            <h1 class="heading-1 heading-1--single">{{.Title}}</h1>
+        </div>
+    </div>
+</header>
+
+<section class="section section--gradient">
+    {{ if (eq .Params.presentation_type "1") }}
+        <div class="section__content section__content--presentations-oral u-margin-top-small u-margin-bottom-big">
+    {{ end }}
+    {{ if (eq .Params.presentation_type "2") }}
+        <div class="section__content section__content--presentations-poster u-margin-top-small u-margin-bottom-big">
+    {{ end }}
+
+        <div class="presentation__info--single u-margin-top-small u-margin-bottom-medium">
+            <div class="presentation__authors">
+                <i class="fas fa-users"></i>
+                <p>{{ with .Params.authors }}
+                    {{ delimit . ", " | markdownify }}
+                {{ end }}</p>
+            </div>
+            <div class="presentation__date">
+                <i class="fas fa-calendar-alt"></i>
+                <p>{{ if .Params.dates }}
+                    {{ .Params.dates | markdownify }},
+                {{ end }}
+                {{ .Date.Format "2006" }}</p>
+            </div>
+            <div class="presentation__location">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>{{ if .Params.location }}
+                    {{ .Params.location | markdownify }}
+                {{ end }}</p>
+            </div>  
+        </div>
+        <!-- <div class="presentation__content"> -->
+            <!-- {{ if (eq .Params.presentation_type "1") }}
+                <div class="presentation__slides">
+                    {{ partial "carousel.html" . }}
+                </div>
+            {{ end }}
+            {{ if (eq .Params.presentation_type "2") }}
+                <div class="presentation__poster">
+                    <img src="{{ (print "../" $.File.TranslationBaseName "_full.jpg") }}" alt="{{ .Title }}">
+                </div>
+            {{ end }} -->
+        <!-- </div> -->
+        <a href="#popup__presentation--{{ $.File.TranslationBaseName }}" class="btn btn--orange btn--presentation u-margin-bottom-medium u-margin-top-small">Watch Presentation</a>
+        {{ if .Params.abstract }}
+            <div class="presentation__abstract u-margin-top-big">
+                <h3 class="heading-3">Abstract</h3>
+                {{ .Params.abstract | markdownify }}            
+            </div>
+        {{ end }}
+
+        {{ if (eq .Params.presentation_type "1") }}
+            {{ partial "presentation-oral_popup" . }}
+        {{ end }}
+        {{ if (eq .Params.presentation_type "2") }}
+            {{ partial "presentation-poster_popup" . }}
+        {{ end }}
+
+        
+    </div>
+</section>
+
+{{ partial "footer.html" . }}

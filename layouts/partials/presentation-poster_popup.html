@@ -1,0 +1,12 @@
+{{ $captions := .Params.captions }}
+
+<div class="popup presentation__popup presentation__popup--poster" id="popup__presentation--{{ $.File.TranslationBaseName }}">
+    <a  class="popup__cancel" href="#!"></a>
+    <div class="popup__content">
+        <a href="#!" class="popup__close">&times;</a>
+        <div class="presentation__poster">
+            <img src="{{ (print "../" $.File.TranslationBaseName "_full.jpg") }}" alt="{{ .Title }}">
+        </div>
+    </div>
+</div>
+    

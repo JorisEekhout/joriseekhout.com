@@ -1,0 +1,20 @@
+{{ $institutions := .Params.institutions }}
+
+<div class="project__item">
+    <a class="project__title" href="{{ $.Permalink }}">
+        <h4 class="heading-4">{{ .Title }}</h4>
+      </a>
+    {{ if .Params.title_english }}
+        {{- .Params.title_english | markdownify -}}<br>
+    {{ end }}
+    Funded by&nbsp;{{- .Params.funding | markdownify -}}&nbsp;({{- .Params.year_start | markdownify -}}-{{- .Params.year_finish | markdownify -}})<br>
+    <ul class="project__institution-list">
+    {{ range $index, $element := $institutions }}
+        <li class="project__institution">{{- index ($institutions) $index | markdownify -}}</li>{{ if (lt $index (add (len $institutions) -2)) }},{{ else if (eq $index (add (len $institutions) -2)) }} and {{ end }}
+    {{ end }}
+    </ul>
+
+    <p><i>My role was to {{ .Params.my_role }}</i></p>
+    <!-- <i>{{- .Params.summary | markdownify -}}</i> -->
+    <!-- <p>{{ partial "project_links" (dict "content" . "is_list" 1) }}</p> -->
+</div>

@@ -1,0 +1,40 @@
+<div class="publication__item" id="publication__item--{{ $.File.TranslationBaseName }}">
+    <div class="publication__open-access">
+        {{ with $.Params.openaccess }}
+            <i class="ai ai-open-access"></i>
+        {{ end }}
+    </div>
+    <h4 class="heading-4 publication__title">{{ .Title }} {{- if .Params.status -}}&nbsp;<em><b>({{- .Params.status | markdownify -}})</b></em>{{ end }}</h4>
+    <p class="author">
+    {{ with .Params.authors }}
+        {{- delimit . ", " | markdownify -}}
+    {{- end -}}
+    </p>
+    {{- if not .Params.status -}}
+    <p>
+        {{- if .Params.publisher -}}
+            {{- .Params.publisher | markdownify -}}
+        {{ end }}
+        {{- if .Params.volume -}}
+            &nbsp;{{- .Params.volume | markdownify -}}
+        {{ end }}
+        {{- if .Params.issue -}}
+            &nbsp;({{- .Params.issue | markdownify -}})
+        {{- end -}}
+        :
+        {{- if .Params.pages -}}
+            &nbsp;{{- .Params.pages | markdownify -}},
+        {{ end }}
+        {{- if .Params.location -}}
+            {{- .Params.location | markdownify -}},
+        {{ end }}
+        {{- if .Params.dates -}}
+            {{- .Params.dates | markdownify -}},
+        {{ end }}
+        <b>{{- .Date.Format "2006" -}}</b>
+    {{- end -}}
+    </p>
+    {{ if (eq .Params.status "") }}
+        <div class="publication__icons">{{ partial "publication_links" (dict "content" . "is_list" 1) }}</div>
+    {{ end }}
+</div>
