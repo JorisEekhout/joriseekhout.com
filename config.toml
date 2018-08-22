@@ -1,4 +1,5 @@
-baseURL = "http://www.joriseekhout.com/"
+# baseURL = "https://www.joriseekhout.com/"
+baseURL = "https://joriseekhout.netlify.com/"
 languageCode = "en-us"
 title = "Joris Eekhout"
 paginate = 5
