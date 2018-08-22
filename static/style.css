@@ -366,7 +366,7 @@ body {
     display: none; }
 
 @media only screen and (max-width: 37.5em) {
-  .publication__list {
+  .publication__list, .publication__latest {
     padding: 0 3rem; } }
 
 .publication__item {
@@ -744,6 +744,10 @@ body {
   font-size: 1.5rem;
   padding: 1rem 0;
   margin: 0 2rem; }
+  .website__content a:link,
+  .website__content a:visited {
+    color: #cd6133;
+    text-decoration: none; }
 
 .footer {
   grid-column: full-start / full-end;
@@ -852,7 +856,8 @@ body {
         display: none; } }
     @media only screen and (max-width: 37.5em) {
       .navigation__phone {
-        display: flex; } }
+        display: flex;
+        height: 6rem; } }
   .navigation__brand {
     grid-column: 1 / 2;
     justify-self: left;
@@ -865,7 +870,8 @@ body {
     @media only screen and (max-width: 37.5em) {
       .navigation__brand {
         display: initial;
-        align-self: center; } }
+        align-self: center;
+        font-size: 3.5rem; } }
   .navigation__button {
     display: none;
     color: #cd6133;
@@ -875,7 +881,8 @@ body {
       .navigation__button {
         align-self: center;
         display: initial;
-        cursor: pointer; } }
+        cursor: pointer;
+        font-size: 3rem; } }
   .navigation__checkbox {
     display: none; }
   .navigation__checkbox:checked ~ .navigation__list {
@@ -927,6 +934,9 @@ body {
     transition: all .2s; }
     :hover > .navigation__text {
       color: #f7fcf0; }
+    @media only screen and (max-width: 37.5em) {
+      .navigation__text {
+        font-size: 1.8rem; } }
 
 .container {
   display: grid;
@@ -979,6 +989,10 @@ body {
 
 .section__content--about {
   font-size: 1.7rem; }
+  .section__content--about a:link,
+  .section__content--about a:visited {
+    color: #cd6133;
+    text-decoration: none; }
   @media only screen and (max-width: 37.5em) {
     .section__content--about {
       margin: 0 2rem; } }
@@ -1276,11 +1290,8 @@ body {
     font-size: 1.5rem;
     padding: .5rem 1rem .5rem 0;
     align-items: center;
-    height: 10rem;
+    height: 12.5rem;
     width: 100%; }
-    @media only screen and (max-width: 56.25em) {
-      .presentation__popup--oral .popup__content .carousel__caption {
-        height: 12.5rem; } }
     @media only screen and (max-width: 37.5em) {
       .presentation__popup--oral .popup__content .carousel__caption {
         height: 15rem; } }
@@ -1293,10 +1304,7 @@ body {
   .presentation__popup--oral .popup__content .carousel > label:hover:after {
     opacity: 1; }
   .presentation__popup--oral .popup__content .carousel > label {
-    height: calc(100% - 10rem); }
-    @media only screen and (max-width: 56.25em) {
-      .presentation__popup--oral .popup__content .carousel > label {
-        height: calc(100% - 12.5rem); } }
+    height: calc(100% - 12.5rem); }
     @media only screen and (max-width: 37.5em) {
       .presentation__popup--oral .popup__content .carousel > label {
         height: calc(100% - 15rem); } }

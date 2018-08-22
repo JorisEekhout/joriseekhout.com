@@ -1,6 +1,6 @@
 <div class="website__item" id="website__item--{{ $.File.TranslationBaseName }}">
-    <div class="website__img" style="background-image: url({{ (print "../about-me/" $.File.TranslationBaseName ".jpg") }})">
-    </div>
+    <a target="_blank" rel="noopener noreferrer" href="{{ .Params.link }}"><div class="website__img" style="background-image: url({{ (print "../about-me/" $.File.TranslationBaseName ".jpg") }})">
+    </div></a>
     <div class="website__title">
         <h4 class="heading-4">{{ .Title }}</h4>
     </div>
