@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://sleepy-elion-a681a6.netlify.com/* http://www.joriseekhout.com/:splat 301!
