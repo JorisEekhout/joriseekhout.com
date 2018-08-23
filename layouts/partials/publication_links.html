@@ -23,8 +23,8 @@
     </a>
 {{ end }}
 {{ with $.Params.url_slides }}
-    <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
-        <i class="fa fa-slideshare"></i>
+    <a class="icon icon--publication" href="/presentations/{{ $.Params.url_slides }}" target="_blank">
+        <i class="fab fa-slideshare"></i>
     </a>
 {{ end }}
 {{ with $.Params.url_video }}

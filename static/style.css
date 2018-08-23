@@ -51,6 +51,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   box-sizing: inherit; }
 
 html {
+  height: 100%;
   font-size: 62.5%; }
   @media only screen and (max-width: 75em) {
     html {
@@ -63,7 +64,8 @@ html {
       font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  min-height: 100%; }
 
 ::selection {
   background-color: #0868ac;
@@ -867,8 +869,12 @@ body {
     padding-left: 1rem;
     word-spacing: -.3em;
     font-family: "Josefin Sans", sans-serif; }
+    @media only screen and (max-width: 75em) {
+      .navigation__brand {
+        padding-left: .5rem; } }
     @media only screen and (max-width: 37.5em) {
       .navigation__brand {
+        padding-left: 1rem;
         display: initial;
         align-self: center;
         font-size: 3.5rem; } }
@@ -893,7 +899,7 @@ body {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-column-gap: 2rem;
+    grid-column-gap: 1rem;
     justify-items: center;
     align-items: center; }
     @media only screen and (max-width: 75em) {
