@@ -1,4 +1,4 @@
-baseURL = "http://www.joriseekhout.com/"
+baseURL = "https://www.joriseekhout.com/"
 languageCode = "en-us"
 title = "Joris Eekhout"
 paginate = 5
