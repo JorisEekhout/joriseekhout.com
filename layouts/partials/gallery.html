@@ -3,7 +3,7 @@
 <div class="gallery">
     {{ range $index, $element := (readDir (print "/content/" .Section "/" $.File.TranslationBaseName) ) }}
         <div class="gallery__content">
-            <img src="{{ (print "../" $.File.TranslationBaseName "/" .Name) }}" />
+            <img src="{{ (print "../" $.File.TranslationBaseName "/" .Name) }}" alt="{{ index ($captions) $index }}" />
             <div class="gallery__caption">
                 {{ index ($captions) $index }}
             </div>

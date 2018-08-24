@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /pdf/
+
+Sitemap: https://www.joriseekhout.com/sitemap.xml

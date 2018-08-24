@@ -2,6 +2,7 @@
 slug = "adapt"
 date = "2015-05-01"
 title = "Evaluating climate change adaptation through Sustainable Land Management and its impacts on Mediterranean ecosystem services (ADAPT)"
+description = "Project page Evaluating climate change adaptation through Sustainable Land Management and its impacts on Mediterranean ecosystem services (ADAPT)"
 title_english = ""
 year_start = "2015"
 year_finish = "2017"

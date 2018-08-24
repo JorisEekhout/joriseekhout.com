@@ -12,7 +12,7 @@
         </p>
         {{ if (fileExists (print "publications/" $.File.TranslationBaseName ".jpg") ) }}
             <div class="popup__image">
-                <img src="{{ (print "../../publications/" $.File.TranslationBaseName ".jpg") }}" title="Graphical abstract">
+                <img src="{{ (print "../../publications/" $.File.TranslationBaseName ".jpg") }}" alt="Graphical abstract for {{ .Params.title }}">
             </div>
         {{ end }}
     </div>

@@ -1,4 +1,5 @@
 {{ $captions := .Params.captions }}
+{{ $title := .Params.title }}
 
 <div class="carousel">
     {{ range $index, $element := (readDir (print "/content/presentations/" $.File.TranslationBaseName) ) }}
@@ -6,7 +7,7 @@
             <input id="image{{ (add $index 1) }}" type="radio" name="image-selector" checked="checked" />
             <label for="image{{ len (readDir (print "/content/presentations/" $.File.TranslationBaseName) ) }}">View image {{ len (readDir (print "/content/presentations/" $.File.TranslationBaseName) ) }}</label>
             <div class="carousel__content">
-                <img src="{{ (print "../" $.File.TranslationBaseName "/" .Name) }}" />
+                <img src="{{ (print "../" $.File.TranslationBaseName "/" .Name) }}"/>
                 <div class="carousel__caption">
                     <div class="carousel__caption-number">
                         {{ (add $index 1) }}/{{ len (readDir (print "/content/presentations/" $.File.TranslationBaseName) ) }}
@@ -20,7 +21,7 @@
             <input id="image{{ (add $index 1) }}" type="radio" name="image-selector"/>
             <label for="image{{ (add $index 0) }}">View image {{ (add $index 0) }}</label>
             <div class="carousel__content">
-                <img src="{{ (print "../" $.File.TranslationBaseName "/" .Name) }}" />
+                <img src="{{ (print "../" $.File.TranslationBaseName "/" .Name) }}"/>
                 <div class="carousel__caption">
                     <div class="carousel__caption-number">
                         {{ (add $index 1) }}/{{ len (readDir (print "/content/presentations/" $.File.TranslationBaseName) ) }}

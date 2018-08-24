@@ -1,6 +1,5 @@
 <div class="publication__cover">
-    {{ if (fileExists (print "publications/" $.File.TranslationBaseName "_cover.jpg") ) }}
-        <img src="{{ (print "../../publications/" $.File.TranslationBaseName "_cover.jpg") }}" title="Cover">
+    {{ if (fileExists (print "publications/" $.File.TranslationBaseName "-cover.jpg") ) }}
+        <img src="{{ (print "../../publications/" $.File.TranslationBaseName "-cover.jpg") }}" title="Cover">
     {{ end }}
 </div>
-    
