@@ -10,7 +10,7 @@ googleAnalytics = "UA-59890904-1"
 
 [params]
     author = "Joris Eekhout"
-    description = "I am a postdoctoral researcher at the Soil and Water Conservation Research Group in CEBAS-CSIC (Murcia, Spain). I focusses on the impact of climate change and landuse change on hydrology and soil erosion in Mediterranean environments. On my personal website you can find my research output (publications, presentations and projects) and outreach activities (a blog and videos)."
+    description = "I am a postdoctoral researcher at the Soil and Water Conservation Research Group in CEBAS-CSIC (Murcia, Spain). I focusses on the impact of climate change and landuse change on hydrology and soil erosion in Mediterranean environments. On my personal website you can find my research output and outreach activities."
     publication_types = [
         'Uncategorized',  # 0
         'Journal',  # 1
