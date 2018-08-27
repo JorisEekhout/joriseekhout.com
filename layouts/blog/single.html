@@ -4,13 +4,13 @@
     {{ if (fileExists (print "/blog/" $.File.TranslationBaseName ".jpg") ) }}
         <div class="header__bg-img" style="background-image: url({{ (print "../" $.File.TranslationBaseName ".jpg") }})">
             <div class="header__content header__content--blog-single">
-                <h1 class="heading-1 blog__title blog__title--single">{{.Title}}</h1>
+                <h1 class="heading-1 heading-1--single">{{.Title}}</h1>
             </div>
         </div>
     {{ else }}
         <div class="header__bg-img header--blog">
             <div class="header__content header__content--blog-single">
-                <h1 class="heading-1 blog__title blog__title--single blog__title--orange">{{.Title}}</h1>
+                <h1 class="heading-1 heading-1--single">{{.Title}}</h1>
             </div>
         </div>
     {{ end }}
@@ -23,6 +23,7 @@
             {{ .Content }}
         </div>
         <div class="share share--single">
+            <h3 class="heading-4 share__heading">Share this post</h3>
             {{ partial "share_buttons.html" . }}
         </div>
     </div>

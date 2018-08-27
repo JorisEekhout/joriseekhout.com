@@ -3,7 +3,7 @@
 <div class="project__item">
     <a class="project__title" href="{{ $.Permalink }}">
         <h4 class="heading-4">{{ .Title }}</h4>
-      </a>
+    </a>
     {{ if .Params.title_english }}
         {{- .Params.title_english | markdownify -}}<br>
     {{ end }}

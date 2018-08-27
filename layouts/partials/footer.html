@@ -50,7 +50,7 @@
             </div>
 
             <div class="footer__copyright u-margin-top-huge u-margin-bottom-small">
-                {{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io)" | markdownify }}
+                <p>{{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io)" | markdownify }}</p>
             </div>
         </footer>
         {{ if not (in (.Site.BaseURL | string) "localhost") }}

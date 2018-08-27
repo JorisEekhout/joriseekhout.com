@@ -37,6 +37,7 @@
                 {{ end }}</p>
             </div>  
         </div>
+
         <!-- <div class="presentation__content"> -->
             <!-- {{ if (eq .Params.presentation_type "1") }}
                 <div class="presentation__slides">
@@ -56,6 +57,9 @@
                 {{ .Params.abstract | markdownify }}            
             </div>
         {{ end }}
+        
+        <h3 class="heading-4 share__heading u-margin-top-medium">Share this presentation</h3>
+        {{ partial "share_buttons.html" . }}
 
         {{ if (eq .Params.presentation_type "1") }}
             {{ partial "presentation-oral_popup" . }}

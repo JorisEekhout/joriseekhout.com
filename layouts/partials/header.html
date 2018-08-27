@@ -22,6 +22,8 @@
             <meta property="og:type" content="article">
             {{ if (fileExists (print .Section "/" $.File.TranslationBaseName ".jpg") ) }}
                 <meta property="og:image" content="{{ (print .Site.BaseURL .Section "/" $.File.TranslationBaseName ".jpg") }}">
+            {{ else }}
+                <meta property="og:image" content="{{.Site.BaseURL}}img/site-logo.jpg">
             {{ end }}
         {{ else }}
             <meta property="og:type" content="website">

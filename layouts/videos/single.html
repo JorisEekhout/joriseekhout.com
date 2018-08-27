@@ -37,6 +37,8 @@
         <div class="video__embeded">
             <iframe class="video__iframe" src="https://www.youtube.com/embed/{{- .Params.id -}}" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
         </div>
+        <h3 class="heading-4 share__heading u-margin-top-medium">Share this video</h3>
+        {{ partial "share_buttons.html" . }}
     </div>
 </section>
 
