@@ -9,13 +9,13 @@
         {{ end }}
     </a>
     <div class="blog__text">
-        <div class="blog__date u-margin-top-small u-margin-bottom-small">Published on: {{ .Date.Format "January 2, 2006" }}</div>
+        <div class="blog__date u-margin-bottom-small">Published on: {{ .Date.Format "January 2, 2006" }}</div>
         <div class="blog__content">
             <p>
                 {{ $.Scratch.Set "summary" ((delimit (findRE "(<p.*?>.*?</p>\\s*)+" .Content) "[&hellip;] ") | plainify | truncate 500 (default "&hellip;" .Site.Params.text.truncated ) | replaceRE "&amp;" "&" | safeHTML) }}
                 {{ $.Scratch.Get "summary" }}
             </p>
-            <p><a href="{{ .RelPermalink }}" class="blog__continue">continue reading <i class="fas fa-arrow-circle-right"></i></a></p>
+            <p class="blog__continue"><a href="{{ .RelPermalink }}">continue reading <i class="fas fa-arrow-circle-right"></i></a></p>
         </div>
     </div>
 </div>

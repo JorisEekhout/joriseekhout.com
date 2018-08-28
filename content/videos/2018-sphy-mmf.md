@@ -1,4 +1,5 @@
 +++
+draft = true
 title = "SPHY-MMF - Coupled Hydrology-Soil Erosion Model"
 description = "Video page SPHY-MMF - Coupled Hydrology-Soil Erosion Model"
 summary = "We developed a new process-based soil erosion model, by coupling an existing soil erosion model (Morgan-Morgan-Finney) to a hydrological model (SPHY). The model is well-suited to perform scenario assessments at regional scales and over decadal periods, most relevant for policy makers."

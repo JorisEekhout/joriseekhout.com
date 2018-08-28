@@ -5,12 +5,12 @@
         <h4 class="heading-4">{{ .Title }}</h4>
     </a>
     {{ if .Params.title_english }}
-        {{- .Params.title_english | markdownify -}}<br>
+        <p>{{- .Params.title_english | markdownify -}}</p>
     {{ end }}
-    Funded by&nbsp;{{- .Params.funding | markdownify -}}&nbsp;({{- .Params.year_start | markdownify -}}-{{- .Params.year_finish | markdownify -}})<br>
+    <p>Funded by&nbsp;{{- .Params.funding | markdownify -}}&nbsp;({{- .Params.year_start | markdownify -}}-{{- .Params.year_finish | markdownify -}})</p>
     <ul class="project__institution-list">
     {{ range $index, $element := $institutions }}
-        <li class="project__institution">{{- index ($institutions) $index | markdownify -}}</li>{{ if (lt $index (add (len $institutions) -2)) }},{{ else if (eq $index (add (len $institutions) -2)) }} and {{ end }}
+        <li class="project__institution">{{- index ($institutions) $index | markdownify -}}</li>{{ if (lt $index (add (len $institutions) -2)) }}<span class="project__span">,</span>{{ else if (eq $index (add (len $institutions) -2)) }}<span class="project__span"> and </span>{{ end }}
     {{ end }}
     </ul>
 

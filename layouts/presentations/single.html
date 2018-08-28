@@ -58,8 +58,10 @@
             </div>
         {{ end }}
         
-        <h3 class="heading-4 share__heading u-margin-top-medium">Share this presentation</h3>
-        {{ partial "share_buttons.html" . }}
+        <div class="share share--single share--other">
+            <h3 class="heading-4 share__heading u-margin-top-medium">Share this presentation</h3>
+            {{ partial "share_buttons.html" . }}
+        </div>
 
         {{ if (eq .Params.presentation_type "1") }}
             {{ partial "presentation-oral_popup" . }}

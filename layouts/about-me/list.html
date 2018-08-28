@@ -16,15 +16,15 @@
 
 <section class="section section--6">
     <div class="section__content section__content--timeline u-margin-top-huge u-margin-bottom-huge">
-        <h2 class="heading-2 u-center-text">Timeline</h2>
+        <h2 class="heading-2 u-center-text u-margin-bottom-medium">Timeline</h2>
         {{ partial "timeline" . }}
     </div>
 </section>
 
 <section class="section section--7">
     <div class="section__content--wide u-margin-top-huge u-margin-bottom-huge">
-        <div class="website__list u-margin-bottom-medium u-margin-top-medium">
-            <h2 class="heading-2 u-center-text">Websites</h2>
+        <h2 class="heading-2 u-center-text u-margin-bottom-medium">Websites</h2>
+        <div class="website__list">
             {{ range (where .Data.Pages.ByDate.Reverse "Section" "about-me") }}
                 {{ partial "website_card" . }}
             {{ end }}
