@@ -14,7 +14,7 @@ url_article = ""
 url_dataset = ""
 url_pdf = "Eekhout, Terink, de Vente - 2018 - Earth Surface Dynamics.pdf"
 url_slides = ""
-url_video = "https://doi.org/10.5446/37585"
+url_video = "https://www.youtube.com/watch?v=yP1o5w3VEN8"
 url_code = "https://doi.org/10.5281/zenodo.1344534"
 project = "adapt"
 openaccess = true
