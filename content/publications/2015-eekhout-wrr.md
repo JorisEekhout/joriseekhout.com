@@ -17,5 +17,5 @@ url_slides = "2013-rcem"
 url_video = ""
 url_code = ""
 project = "morfologische-en-ecologische-aspecten-van-hermeandering"
-openaccess = false
+openaccess = true
 +++
