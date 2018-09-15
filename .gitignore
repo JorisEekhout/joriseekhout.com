@@ -2,3 +2,7 @@
 assets/css/
 assets/sass/
 node_modules/
+layouts/partials/timeline2.html
+layouts/about-me-2/
+content/about-me-2/
+static/style_temp.css

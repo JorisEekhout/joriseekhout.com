@@ -26,6 +26,7 @@ googleAnalytics = "UA-59890904-1"
         'Oral presentation',  # 1
         'Poster presentation'  # 2
     ]
+    timeline_start = "2000-01-01"
 
 
 [[menu.main]]

@@ -5,9 +5,9 @@
   "author": "Joris Eekhout",
   "license": "ISC",
   "scripts": {
-    "clean": "del-cli static/*.css",
+    "clean": "del-cli static/style_temp.css",
     "sass:watch": "onchange \"assets/sass/**/*.scss\" -- npm run sass:build",
-    "sass:build": "node-sass assets/sass/main.scss static/style.css",
+    "sass:build": "node-sass assets/sass/main.scss static/style_temp.css",
     "build:assets": "npm run clean && npm run sass:build",
     "build": "npm run build:assets && hugo",
     "build:website": "npm run build:assets && hugo --baseURL https://__baseurl__",

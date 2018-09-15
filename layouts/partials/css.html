@@ -7,13 +7,14 @@
 <!-- Academicons -->
 <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
 
-<!-- font awesome -->
 {{ if (in (.Site.BaseURL | string) "localhost") }}
+    <!-- font awesome -->
     <link rel="stylesheet" href="css/solid.css">
     <link rel="stylesheet" href="css/brands.css">
     <link rel="stylesheet" href="css/fontawesome.css">
+    <!-- custom -->
+    <link rel="stylesheet" href="/style_temp.css">
+{{ else }}
+    <!-- custom -->
+    {{ range .Site.Params.css }} <link rel="stylesheet" href="{{ . }}"> {{ end }}
 {{ end }}
-
-<!-- custom -->
-{{ range .Site.Params.css }} <link rel="stylesheet" href="{{ . }}"> {{ end }}
-
