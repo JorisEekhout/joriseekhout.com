@@ -21,8 +21,8 @@ captions = ["Here we presented the results of a large-scale field experiment on 
 "This picture shows the experimental channel just after construction finished.", 
 "Alternate bars formed in the downstream part of the experimental reach. In the upstream part vegetation dominated the channel soon after the experiment started. The focus of this presentation is on the downstream part.", 
 "This aerial photo shows the clear distinction between the vegetated part and the downstream part where the alternate bars appeared.", 
-"The field monitoring focussed on the morphological development of the experimental reach. Morphological data were obtained with GPS equipment and interpolated onto a grid. Besides, discharge and water level were measured continuously and grain size analysis was made from sediment samples", 
-"This figure shows the digital elevation model (DEM) of the first 5 morphological surveys, up to 1 and a half years after construction", 
+"The field monitoring focussed on the morphological development of the experimental reach. Morphological data were obtained with GPS equipment and interpolated onto a grid. Besides, discharge and water level were measured continuously and grain size analysis was made from sediment samples.", 
+"This figure shows the digital elevation model (DEM) of the first 5 morphological surveys, up to 1 and a half years after construction.", 
 "Besides alternate bars, also other morphological development was observed, such as bank erosion in the upstream part of the experimental reach.", 
 "And gully erosion from the initial steep banks.", 
 "Bar characteristics were obtained from the DEMs. A loess filter was applied to the longitudinal bed profile to find bar wavelengths and local extremes, i.e. bar tops and bar troughs.", 
@@ -31,5 +31,5 @@ captions = ["Here we presented the results of a large-scale field experiment on 
 "This figure shows that the bars were migrating during the study period, with bar speeds up to 0.21 m per day.", 
 "The highest bar migration rates were observed in periods with high discharge levels.", 
 "In this presentation we showed that alternate bars developed within months after the start of a field experiment. During a period of over 1 and a half years, the bars were morphologically active, with increases and decreases of bar height and bar migration.", 
-"Thanks you for your attention"]
+"Thanks you for your attention!"]
 +++
