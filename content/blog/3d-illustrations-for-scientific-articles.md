@@ -2,7 +2,7 @@
 title: "3d Illustrations for Scientific Articles"
 date: 2018-12-08
 draft: false
-twitter_img: "/img/blog/soil_erosion_processes.png"
+twitter_img: "img/blog/soil_erosion_processes.png"
 ---
 
 **In one of my [latest publications](https://doi.org/10.5194/esurf-6-687-2018) I took some of my illustrations to the next level. I used 3D software to illustrate some of the key aspects of the soil erosion model I have developed. In this blog post I will tell some about the software I used and some experience I got with making 3D illustrations.**
