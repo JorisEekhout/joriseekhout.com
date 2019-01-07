@@ -34,7 +34,7 @@
         <b>{{- .Date.Format "2006" -}}</b>
     {{- end -}}
     </p>
-    {{ if (eq .Params.status "") }}
+    {{ if (ne .Params.inPrep "true") }}
         <div class="publication__icons"><div class="publication__links">links <i class="fas fa-link"></i></div>{{ partial "publication_links" (dict "content" . "is_list" 1) }}</div>
     {{ end }}
 </div>

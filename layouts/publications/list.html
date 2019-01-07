@@ -17,7 +17,7 @@
     <div class="section__content u-margin-top-huge u-margin-bottom-huge">
         <h2 class="heading-2 u-center-text">Peer-reviewed Publications</h2>
         <div class="publication__list u-margin-bottom-medium u-margin-top-medium">
-            {{ range (where (where (where .Data.Pages.ByDate.Reverse "Section" "publications") ".Params.publication_type" "1") ".Params.status" "") }}
+            {{ range (where (where (where .Data.Pages.ByDate.Reverse "Section" "publications") ".Params.publication_type" "1") ".Params.doi" "!=" "") }}
                 {{ partial "publication_item" . }}
                 {{ partial "publication_popup" . }}
             {{ end }}
@@ -31,7 +31,7 @@
         </div>
         <h2 class="heading-2 u-center-text u-margin-top-big">Manuscripts In Preparation</h2>
         <div class="publication__list u-margin-bottom-medium u-margin-top-medium">
-            {{ range (where (where (where .Data.Pages.ByDate.Reverse "Section" "publications") ".Params.publication_type" "1") ".Params.status" "!=" "") }}
+            {{ range (where (where (where .Data.Pages.ByDate.Reverse "Section" "publications") ".Params.publication_type" "1") ".Params.doi" "") }}
                 {{ partial "publication_item" . }}
             {{ end }}
         </div>
