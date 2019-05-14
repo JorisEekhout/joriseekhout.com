@@ -13,4 +13,4 @@ institutions = ["CEBAS-CSIC"]
 my_role = "further develop the coupled hydrology-soil erosion model SPHY-MMF."
 +++
 
-In 2017 I was awarded a Juan de la Cierva fellowship, which is a 2-year postodoctoral grant from the Spanish Ministry of Economy and Competitiveness. During the coming two years I will follow with the research I started in 2015, in the ADAPT project. One of the aims is to couple a hydraulic model to the soil erosion model we developed in the past years. 
+In 2017 I was awarded a Juan de la Cierva fellowship, which is a 2-year postodoctoral grant from the Spanish Ministry of Economy and Competitiveness. During the coming two years I will follow with the research I started in 2015, in the [ADAPT project](/projects/adapt/). One of the aims is to couple a hydraulic model to the soil erosion model we developed in the past years. 
