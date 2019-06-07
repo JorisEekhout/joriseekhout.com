@@ -1,7 +1,7 @@
 ---
-title: "Large-scale Soil Erosion Modelling"
-date: 2019-05-08
-draft: false
+title: "Large-scale Soil Erosion Modeling"
+date: 2019-06-15
+draft: true
 twitter_img: "img/blog/catchment_TC_SY.png"
 ---
 
@@ -23,4 +23,4 @@ Process-based soil erosion models are often thought of being data demanding. Whi
 
 Like with all models, some parts of the model is better represented than others. Like the figure shown here, the model accounts for sediment transport in the rivers. Currently, the soil erosion modules overestimates erosion in the river cells. One of the future plans is to develop a channel erosion module, which should improve channel erosion estimates. Furthermore, for the European Horizon 2020 project [COASTAL](https://marmenorcoastal.wordpress.com/), we want to apply the SPHY model to the Campo de Cartagena catchment. For this application, we are thinking to develop a irrigation module and nutrient transport module. These modules are very relevant for catchments with a lot of irrigated crops, such as the Campo de Cartagena catchment.
 
-**Soon, the SPHY-MMF model will be launched as SPHY v3.0, which also includes improvements related to glacier processes, plant water stress, open-water evaporation and surface runoff. The model will be available from the [SPHY Github repository](https://github.com/FutureWater/SPHY). See [this presentation](/presentations/2019-sphy-user-day/) I gave during the first SPHY User Day, for an overview of the main improvements I have made to SPHY v3.0.**
+**The SPHY-MMF model is launched as SPHY v3.0, which also includes improvements related to glacier processes, plant water stress, open-water evaporation and surface runoff. The model is available from the [SPHY Github repository](https://github.com/FutureWater/SPHY). See [this presentation](/presentations/2019-sphy-user-day/) I gave during the first SPHY User Day, for an overview of the main improvements I have made to SPHY v3.0.**
