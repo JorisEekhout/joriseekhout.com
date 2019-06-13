@@ -1,7 +1,7 @@
 ---
 title: "Large-scale Soil Erosion Modeling"
-date: 2019-06-15
-draft: true
+date: 2019-06-13
+draft: false
 twitter_img: "img/blog/catchment_TC_SY.png"
 ---
 
