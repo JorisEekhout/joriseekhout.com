@@ -7,7 +7,7 @@
     {{ if .Params.title_english }}
         <p>{{- .Params.title_english | markdownify -}}</p>
     {{ end }}
-    <p>Funded by&nbsp;{{- .Params.funding | markdownify -}}&nbsp;({{- .Params.year_start | markdownify -}}-{{- .Params.year_finish | markdownify -}})</p>
+    <p>Funded by&nbsp;{{- .Params.funding | markdownify -}}&nbsp;({{- .Params.year_start | markdownify -}}{{ if ne .Params.year_start .Params.year_finish }}-{{- .Params.year_finish | markdownify -}}{{ end }})</p>
     <ul class="project__institution-list">
     {{ range $index, $element := $institutions }}
         <li class="project__institution">{{- index ($institutions) $index | markdownify -}}</li>{{ if (lt $index (add (len $institutions) -2)) }}<span class="project__span">,</span>{{ else if (eq $index (add (len $institutions) -2)) }}<span class="project__span"> and </span>{{ end }}
