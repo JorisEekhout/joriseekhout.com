@@ -2,7 +2,7 @@
 title: "3d Illustrations for Scientific Articles"
 date: 2018-12-08
 draft: false
-twitter_img: "img/blog/soil_erosion_processes.png"
+twitter_img: "img/blog/3-soil_erosion_processes.png"
 ---
 
 **In one of my [latest publications](https://doi.org/10.5194/esurf-6-687-2018) I took some of my illustrations to the next level. I used 3D software to illustrate some of the key aspects of the soil erosion model I have developed. In this blog post I will tell some about the software I used and some experience I got with making 3D illustrations.**
@@ -11,11 +11,11 @@ In almost every article I have written so far, I try to include a figure to illu
 
 So I was figuring out, I can downgrade my expectations and make an illustration in 2D or take up the challenge and learn something new. Well, I always go for the steepest hill, so I took up the challenge. I quickly found [Blender](https://www.blender.org/), an open source 3D software package that can be used to make some awesome 3D graphics. When I opened Blender for the first time I was in shock. The interface is way more complicated and far less intuitive than the 2D software I was used to. So, I started a tutorial at [CG Cookie](https://cgcookie.com/flow/introduction-to-blender) to learn some of the basics of 3D modeling and to learn how to use Blender. At CG Cookie they offer several workflows, which cover the most fundamental parts of Blender. I only followed the workflows related to modeling, shading, lighting, texturing and rendering. Other workflows are of course interesting, such as animation and dynamics, but were not essential for me to be able to make a 3D illustration of a hillslope. 
 
-{{< figure src="/img/blog/blenderlogo.png" alt="Blender" width="65%">}}
+{{< figure src="/img/blog/3-blenderlogo.png" alt="Blender" width="65%">}}
 
 Some more inspiration I got from [this tutorial](https://cgi.tutsplus.com/tutorials/secrets-to-creating-low-poly-illustrations-in-blender--cg-31770) that shows how to make a low poly illustration in Blender. A low poly illustration is made up of a few polygons, which is less time consuming to make, but still looks nice. Low poly illustrations do not require textures, but only colors, which also saves time. Sketches in scientific articles do not have to be photorealistic. Low poly illustrations are therefore a quick alternative for making simple 3D sketches.
 
-{{< figure src="/img/blog/soil_erosion_processes.png" alt="Soil erosion processes" width="80%">}}
+{{< figure src="/img/blog/3-soil_erosion_processes.png" alt="Soil erosion processes" width="80%">}}
 
 When I was working my way through the hillslope sketch, I got some more ideas of making other sketches as well. At the end, I made another 4 sketches: the soil erosion processes on the hillslope, the hydrological processes (which was more like a 2D sketch), different types of roughness and some catchment-scale processes. When I finished rendering the images for the article I was writing, I got the idea to also make a video out of it. To make that happen, I did the CG Cookie tutorial on animation, to learn how to animate the movement of the camera. See the resulting video abstract below.
 
