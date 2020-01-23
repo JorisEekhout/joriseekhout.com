@@ -2,7 +2,7 @@
 presentation_type = "1"
 
 project = "adapt"
-authors = ["JPC Eekhout", "J de Vente", "W Terink"]
+authors = ["**JPC Eekhout**", "J de Vente", "W Terink"]
 date = "2016-04-22"
 title = "The impact of climate change and sustainable land management based adaptation on hydrology and soil erosion of a large semiarid catchment"
 description = "Oral presentation The impact of climate change and sustainable land management based adaptation on hydrology and soil erosion of a large semiarid catchment"

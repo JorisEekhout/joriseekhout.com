@@ -1,6 +1,6 @@
 +++
 abstract = ""
-authors = ["TJ Geertsema", "PJJF Torfs", "JPC Eekhout", "AJ Teuling", "AJF Hoitink"]
+authors = ["TJ Geertsema", "PJJF Torfs", "**JPC Eekhout**", "AJ Teuling", "AJF Hoitink"]
 date = "2020-01-07"
 publication_type = "1"
 publisher = "River Research and Applications"

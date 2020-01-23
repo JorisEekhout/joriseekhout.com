@@ -2,7 +2,7 @@
 presentation_type = "1"
 
 project = "beekdalbreed-hermeanderen"
-authors = ["JHF de Brouwer", "JPC Eekhout", "PFM Verdonschot"]
+authors = ["JHF de Brouwer", "**JPC Eekhout**", "PFM Verdonschot"]
 date = "2016-04-22"
 title = "Biological and physical conditions of macroinvertebrates in reference lowland streams"
 description = "Oral presentation Biological and physical conditions of macroinvertebrates in reference lowland streams"

@@ -2,7 +2,7 @@
 presentation_type = "1"
 
 project = "adapt"
-authors = ["JPC Eekhout", "J de Vente"]
+authors = ["**JPC Eekhout**", "J de Vente"]
 date = "2017-03-22"
 title = "Sustainable Land Management potential for climate change adaptation in Mediterranean environments: a regional scale assessment"
 description = "Oral presentation Sustainable Land Management potential for climate change adaptation in Mediterranean environments: a regional scale assessment"

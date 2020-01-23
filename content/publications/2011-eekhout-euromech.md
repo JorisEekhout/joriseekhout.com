@@ -1,6 +1,6 @@
 +++
 abstract = ""
-authors = ["JPC Eekhout", "AJF Hoitink"]
+authors = ["**JPC Eekhout**", "AJF Hoitink"]
 date = "2011-06-15"
 publication_type = "3"
 publisher = "EUROMECH Colloquium 523, Ecohydraulics: linkages between hydraulics, morphodynamics and ecological processes in rivers"

@@ -1,6 +1,6 @@
 +++
 abstract = ""
-authors = ["JHF De Brouwer", "PFM Verdonschot", "JPC Eekhout", "RCM Verdonschot"]
+authors = ["JHF De Brouwer", "PFM Verdonschot", "**JPC Eekhout**", "RCM Verdonschot"]
 date = "2020-01-07"
 publication_type = "1"
 publisher = "Freshwater Science"

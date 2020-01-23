@@ -2,7 +2,7 @@
 presentation_type = "1"
 
 project = "futurewater-sphy"
-authors = ["JPC Eekhout", "J de Vente"]
+authors = ["**JPC Eekhout**", "J de Vente"]
 date = "2019-03-18"
 title = "SPHY v3.0: What’s new?"
 description = "Oral presentation SPHY v3.0: What’s new?"

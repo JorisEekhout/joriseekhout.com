@@ -2,7 +2,7 @@
 presentation_type = "1"
 
 project = "futurewater-madagascar"
-authors = ["JPC Eekhout", "J de Vente"] 
+authors = ["**JPC Eekhout**", "J de Vente"] 
 date = "2019-07-18" 
 title = "Assessing the effectiveness of Sustainable Land Management for large-scale climate change adaptation" 
 description = "Oral presentation Assessing the effectiveness of Sustainable Land Management for large-scale climate change adaptation"

@@ -2,7 +2,7 @@
 presentation_type = "1"
 
 project = "morfologische-en-ecologische-aspecten-van-hermeandering"
-authors = ["JPC Eekhout", "AJF Hoitink"]
+authors = ["**JPC Eekhout**", "AJF Hoitink"]
 date = "2012-09-08"
 title = "Field experiment on alternate bar dynamics"
 

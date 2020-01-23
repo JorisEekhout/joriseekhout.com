@@ -1,6 +1,6 @@
 +++
 abstract = "Large-scale channelisation in the first half of the 20th century caused degradation of the biodiversity in lowland streams in the Netherlands. More than 25 years ago, the Dutch water boards started restoring the degraded lowland streams, which is commonly referred to as stream restoration. Until recently, bank erosion and other changes to the streambed were not taken into account after construction of new stream channels. Data obtained from field measurements show that bank erosion mainly occurs in the first year after construction. The channel stabilizes after the first year, the so-called morphological adaptation period. Furthermore, adaptation of the channel slope has been observed. Local channel narrowing (such as bridges), and variation of the subsoil (such as gravel bars) influence morphological changes of the streambed. In future stream restoration projects it is worthwhile to take these local influences into account, to reduce the risk of unfavourable changes to the streambed."
-authors = ["JPC Eekhout"]
+authors = ["**JPC Eekhout**"]
 date = "2014-05-09"
 publication_type = "4"
 publisher = "Wageningen University"

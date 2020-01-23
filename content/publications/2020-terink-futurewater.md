@@ -1,6 +1,6 @@
 +++
 abstract = ""
-authors = ["W Terink", "JPC Eekhout", "W Immerzeel", "A Lutz", "G Simons"]
+authors = ["W Terink", "**JPC Eekhout**", "W Immerzeel", "A Lutz", "G Simons"]
 date = "2020-01-01"
 publication_type = "5"
 publisher = "FutureWater"

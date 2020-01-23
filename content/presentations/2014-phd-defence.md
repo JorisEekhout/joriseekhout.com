@@ -2,7 +2,7 @@
 presentation_type = "1"
 
 project = "morfologische-en-ecologische-aspecten-van-hermeandering"
-authors = ["JPC Eekhout"]
+authors = ["**JPC Eekhout**"]
 date = "2014-05-09"
 title = "Morphological Processes in Lowland Streams – Implications for Stream Restoration"
 description = "Oral presentation Morphological Processes in Lowland Streams – Implications for Stream Restoration"
