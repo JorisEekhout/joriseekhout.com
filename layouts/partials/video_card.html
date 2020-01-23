@@ -10,7 +10,7 @@
         <div class="video__authors">
             <i class="fas fa-users"></i>
             <p>{{ with .Params.authors }}
-                {{ delimit . ", " | markdownify }}
+                {{ delimit . ", "  " and " | markdownify }}
             {{ end }}</p>
         </div>
         <div class="video__date">
