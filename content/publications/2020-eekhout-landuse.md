@@ -1,14 +1,14 @@
 +++
 abstract = ""
-authors = ["**JPC Eekhout**", "P Pérez Cutillas", "C Boix-Fayos", "J de Vente"]
+authors = ["**JPC Eekhout**", "C Boix-Fayos", "P Pérez Cutillas", "J de Vente"]
 date = "2020-01-01"
 publication_type = "1"
 publisher = ""
-status = "in preparation"
+status = "under review"
 volume = ""
 issue = ""
 pages = ""
-title = "The impact of historical land use change on water security in a large Mediterranean catchment"
+title = "The impact of reservoir construction and changes in land use and climate on ecosystem services in Mediterranean environments"
 doi = ""
 url_article = ""
 url_dataset = ""
