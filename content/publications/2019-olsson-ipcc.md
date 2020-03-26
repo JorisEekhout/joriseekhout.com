@@ -1,6 +1,6 @@
 +++
 abstract = ""
-authors = ["L Olsson", "H Barbosa", "S Bhadwal", "A Cowie", "K Delusca", "D Flores-Renteria", "K Hermans", "E Jobbagy", "W Kurz", "D Li", "DJ Sonwa", "L Stringer (as contributing author)"]
+authors = ["L Olsson", "H Barbosa", "S Bhadwal", "A Cowie", "K Delusca", "D Flores-Renteria", "K Hermans", "E Jobbagy", "W Kurz", "D Li", "DJ Sonwa", "L Stringer (*as contributing author*)"]
 date = "2019-08-08"
 publication_type = "5"
 publisher = "IPCC special report"
