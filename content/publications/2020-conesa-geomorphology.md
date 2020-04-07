@@ -1,10 +1,10 @@
 +++
 abstract = ""
 authors = ["C Conesa-García", "P Pérez-Cutillas", "R García-Lorenzo", "**JPC Eekhout**", "A Gómez-Gutiérrez", "A Millares", "A Martínez-Salvador"]
-date = "2020-01-01"
+date = "2020-04-02"
 publication_type = "1"
-publisher = ""
-status = "under review"
+publisher = "Geomorphology"
+status = "accepted"
 volume = ""
 issue = ""
 pages = ""
