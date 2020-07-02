@@ -14,7 +14,7 @@ url_article = ""
 url_dataset = ""
 url_pdf = ""
 url_slides = "2020-egu-2"
-url_video = ""
+url_video = "https://www.youtube.com/watch?v=NzdJx0rpIMo"
 url_code = ""
 project = "juan-de-la-cierva"
 openaccess = false
