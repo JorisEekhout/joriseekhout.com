@@ -11,98 +11,21 @@
 <section class="section section--gradient">
     <div class="section__content section__content--publications u-margin-top-small u-margin-bottom-big">
         <div class="publication__info--single u-margin-top-small u-margin-bottom-small">
-            <div class="publication__item" id="publication__item--{{ $.File.TranslationBaseName }}">
-                <div class="publication__open-access">
-                    {{ with $.Params.openaccess }}
-                        <i class="ai ai-open-access"></i>
-                    {{ end }}
-                </div>
-                <h4 class="heading-4 publication__title">{{ .Title }} {{- if .Params.status -}}&nbsp;<em><b>({{- .Params.status | markdownify -}})</b></em>{{ end }}</h4>
-                <p class="author">
-                    {{ with .Params.authors }}
-                        {{- delimit . ", " " and " | markdownify -}}
-                    {{- end -}}
-                </p>
-                    {{- if not .Params.status -}}
-                <p>
-                    {{- if .Params.publisher -}}
-                        {{- .Params.publisher | markdownify -}}
-                    {{ end }}
-                    {{- if .Params.volume -}}
-                        &nbsp;{{- .Params.volume | markdownify -}}
-                    {{ end }}
-                    {{- if .Params.issue -}}
-                        &nbsp;({{- .Params.issue | markdownify -}})
-                    {{- end -}}
-                    :
-                    {{- if .Params.pages -}}
-                        &nbsp;{{- .Params.pages | markdownify -}},
-                    {{ end }}
-                    {{- if .Params.location -}}
-                        {{- .Params.location | markdownify -}},
-                    {{ end }}
-                    {{- if .Params.dates -}}
-                        {{- .Params.dates | markdownify -}},
-                    {{ end }}
-                    <b>{{- .Date.Format "2006" -}}</b>
-                {{- end -}}
-                </p>
-                {{ if (ne .Params.inPrep "true") }}
-                <div class="publication__icons"><div class="publication__links">links <i class="fas fa-link"></i></div>
-                {{ with $.Params.doi }}
-                <a class="icon icon--publication" href="https://doi.org/{{ $.Params.doi }}" target="_blank">
-                    <i class="ai ai-doi"></i>
-                </a>
-                {{ end }}
-                {{ with $.Params.url_article }}
-                    <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
-                        <i class="fa fa-book-open"></i>
-                    </a>
-                {{ end }}
-                {{ with $.Params.url_pdf }}
-                    <a class="icon icon--publication" href="/pdf/{{ $.Params.url_pdf }}" target="_blank">
-                        <i class="fa fa-file-pdf"></i>
-                    </a>
-                {{ end }}
-                {{ with $.Params.url_slides }}
-                    <a class="icon icon--publication" href="/presentations/{{ $.Params.url_slides }}" target="_blank">
-                        <i class="fab fa-slideshare"></i>
-                    </a>
-                {{ end }}
-                {{ with $.Params.url_video }}
-                    <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
-                        <i class="fa fa-video"></i>
-                    </a>
-                {{ end }}
-                {{ with $.Params.url_code }}
-                    <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
-                        <i class="fa fa-code"></i>
-                    </a>
-                {{ end }}
-                {{ with $.Params.url_dataset }}
-                    <a class="icon icon--publication" href="{{ . | absURL }}" target="_blank">
-                        <i class="fa fa-database"></i>
-                    </a>
-                {{ end }}
-                {{ with $.Params.project }}
-                    <a class="icon icon--publication" href="/projects/{{ $.Params.project }}">
-                        <i class="fas fa-project-diagram"></i>
-                    </a>
-                {{ end }}
-                </div>
-                    {{ end }}
-                </div>
+                {{ partial "publication_item" . }}
+        </div>
+        {{ if (fileExists (print "publications/" $.File.TranslationBaseName ".jpg") ) }}
+            <div class="publication__image">
+                <img src="{{ (print "../../publications/" $.File.TranslationBaseName ".jpg") }}" alt="Graphical abstract for {{ .Params.title }}">
             </div>
-            {{ if (fileExists (print "publications/" $.File.TranslationBaseName ".jpg") ) }}
-                <div class="publication__image">
-                    <img src="{{ (print "../../publications/" $.File.TranslationBaseName ".jpg") }}" alt="Graphical abstract for {{ .Params.title }}">
-                </div>
+        {{ end }}
+        <p class="publication__abstract">
+            {{- if .Params.abstract -}}
+                {{- .Params.abstract | markdownify -}}
             {{ end }}
-            <p class="publication__abstract">
-                {{- if .Params.abstract -}}
-                    {{- .Params.abstract | markdownify -}}
-                {{ end }}
-            </p>
+        </p>
+        <div class="share share--single share--other">
+            <h3 class="heading-4 share__heading u-margin-top-medium">Share this publication</h3>
+            {{ partial "share_buttons.html" . }}
         </div>
     </div>
 </section>
