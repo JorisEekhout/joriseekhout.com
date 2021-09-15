@@ -19,7 +19,12 @@
 {{ end }}
 {{ with $.Params.url_pdf }}
     <a class="icon icon--publication" href="/pdf/{{ $.Params.url_pdf }}" target="_blank">
-        <i class="fa fa-file-pdf"></i>
+        <i class="fas fa-file-pdf"></i>
+    </a>
+{{ end }}
+{{ with $.Params.url_pdf_si }}
+    <a class="icon icon--publication" href="/pdf/{{ $.Params.url_pdf_si }}" target="_blank">
+        <i class="far fa-file-pdf"></i>
     </a>
 {{ end }}
 {{ with $.Params.url_slides }}
