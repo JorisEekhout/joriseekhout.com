@@ -17,6 +17,6 @@ url_slides = "2021-egu-2"
 url_video = ""
 url_code = ""
 project = "xtreme"
-openaccess = false
+openaccess = true
 inPrep = "false"
 +++
