@@ -17,7 +17,7 @@ url_pdf_si = "Boix-Fayos et al. - 2020 - Ecosystem Services SI.docx"
 url_slides = ""
 url_video = "https://www.youtube.com/watch?v=xUm73fEwNp8"
 url_code = ""
-project = "juan-de-la-cierva"
+project = "juan-de-la-cierva-formacion"
 openaccess = false
 inPrep = "false"
 +++

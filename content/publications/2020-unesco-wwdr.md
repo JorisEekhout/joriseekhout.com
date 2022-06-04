@@ -16,7 +16,7 @@ url_pdf = ""
 url_slides = ""
 url_video = ""
 url_code = ""
-project = "juan-de-la-cierva"
+project = "juan-de-la-cierva-formacion"
 openaccess = true
 +++
 

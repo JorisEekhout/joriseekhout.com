@@ -17,7 +17,7 @@ url_pdf_si = "Eekhout et al. - 2020 - Journal of Hydrology SI.pdf"
 url_slides = "2020-egu-2"
 url_video = "https://www.youtube.com/watch?v=NzdJx0rpIMo"
 url_code = ""
-project = "juan-de-la-cierva"
+project = "juan-de-la-cierva-formacion"
 openaccess = false
 inPrep = "false"
 +++

@@ -17,6 +17,6 @@ url_pdf_si = "Eekhout, de Vente - 2020 - Progress in Physical Geography SI.pdf"
 url_slides = "2019-iugg-2"
 url_video = ""
 url_code = ""
-project = "juan-de-la-cierva"
+project = "juan-de-la-cierva-formacion"
 openaccess = false
 +++
