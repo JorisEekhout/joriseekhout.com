@@ -1,6 +1,5 @@
 +++
 abstract = ""
-. Under review. Using Quantile Mapping and Random Forest for bias-correction of high-resolution reanalysis data and CMIP6 climate projections over Iran. Submitted to Climatic Change.
 authors = ["M Raeesi", "AA Zolfaghari", "SH Kaboli", "M Rahimi", "J de Vente", "**JPC Eekhout**"]
 date = "2023-11-15"
 publication_type = "1"
