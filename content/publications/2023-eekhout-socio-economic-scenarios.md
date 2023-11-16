@@ -1,6 +1,6 @@
 +++
 abstract = ""
-authors = ["**JPC Eekhout**", "I Delsman", "JEM Baartman", "M. van Eupen", "C van Haren", "S Contreras", "J de Vente"]
+authors = ["**JPC Eekhout**", "I Delsman", "JEM Baartman", "M van Eupen", "C van Haren", "S Contreras", "J de Vente"]
 date = "2023-11-15"
 publication_type = "1"
 publisher = ""
